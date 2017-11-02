@@ -1,41 +1,63 @@
-﻿<UserControl x:Class="PrismRegionSample.Views.Regions.CustomerView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             Width="Auto">
+﻿<UserControl
+    x:Class="PrismRegionSample.Views.Regions.CustomerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="Auto"
+    mc:Ignorable="d">
     <Grid>
-        <Border Grid.Column ="0" CornerRadius="10" BorderBrush="Black" BorderThickness="1" Margin="1">
-            <ListBox x:Name ="customers"  
-                 ItemsSource="{Binding Customers}" Background="Transparent">
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="{x:Type ListBoxItem}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Margin" Value="5"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                            <Setter Property="Background" Value="LightBlue" />
-                            <Setter Property="BorderBrush" Value="Black"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </ListBox.ItemContainerStyle>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                        <Border Grid.Column ="0" CornerRadius="10" BorderBrush="Black" BorderThickness="1" Margin="1">
+        <Border
+            Grid.Column="0"
+            Margin="1"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="10">
+            <ListBox
+                x:Name="customers"
+                Background="Transparent"
+                ItemsSource="{Binding Customers}">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Margin" Value="5" />
+                        <Setter Property="Padding" Value="5" />
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="BorderThickness" Value="1" />
+                                <Setter Property="Background" Value="LightBlue" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Grid.Column="0"
+                            Margin="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="10">
                             <WrapPanel>
-                                <TextBlock Text="{Binding FirstName}" FontWeight="Bold" Width="100"/>
-                                <TextBlock Text="{Binding LastName}" FontWeight="Bold" Width="100"/>
-                                <TextBlock Text="{Binding Age}" FontWeight="Bold" Width="100"/>
+                                <TextBlock
+                                    Width="100"
+                                    FontWeight="Bold"
+                                    Text="{Binding FirstName}" />
+                                <TextBlock
+                                    Width="100"
+                                    FontWeight="Bold"
+                                    Text="{Binding LastName}" />
+                                <TextBlock
+                                    Width="100"
+                                    FontWeight="Bold"
+                                    Text="{Binding Age}" />
                             </WrapPanel>
                         </Border>
                     </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Border>
     </Grid>
 </UserControl>
