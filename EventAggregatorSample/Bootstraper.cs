@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using EventAggregatorSample.Modules;
 using EventAggregatorSample.Views;
-using Microsoft.Practices.Prism;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.UnityExtensions;
 
@@ -25,7 +19,10 @@ namespace EventAggregatorSample
         protected override void InitializeModules()
         {
             IModule shopModule = Container.TryResolve<ShopModule>();
+            IModule orderModule = Container.TryResolve<OrderModule>();
+
             shopModule.Initialize();
+            orderModule.Initialize();
         }
     }
 }

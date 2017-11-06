@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EventAggregatorSample.Views.Regions
+namespace PrismCommandSample.Views
 {
     /// <summary>
-    /// Interaction logic for OrderRegion.xaml
+    /// Interaction logic for Shell.xaml
     /// </summary>
-    public partial class OrderRegion : UserControl
+    public partial class Shell : Window
     {
-        public OrderRegion()
+        public Shell()
         {
             InitializeComponent();
         }

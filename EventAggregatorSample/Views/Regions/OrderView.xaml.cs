@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EventAggregatorSample.Views.Regions
 {
     /// <summary>
-    /// Interaction logic for ShopRegion.xaml
+    /// Interaction logic for OrderView.xaml
     /// </summary>
-    public partial class ShopRegion : UserControl
+    public partial class OrderView : UserControl
     {
-        public ShopRegion()
+        public OrderView()
         {
             InitializeComponent();
         }

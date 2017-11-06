@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismRegionSample", "PrismR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAggregatorSample", "EventAggregatorSample\EventAggregatorSample.csproj", "{1DA42D60-6DE6-4A67-A4EE-86A07BD28956}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismCommandSample", "PrismCommandSample\PrismCommandSample.csproj", "{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1DA42D60-6DE6-4A67-A4EE-86A07BD28956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA42D60-6DE6-4A67-A4EE-86A07BD28956}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA42D60-6DE6-4A67-A4EE-86A07BD28956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

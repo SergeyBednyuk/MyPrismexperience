@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1DA42D60-6DE6-4A67-A4EE-86A07BD28956}</ProjectGuid>
+    <ProjectGuid>{49F33D33-89E3-4DF1-9638-DCAAEF6A91DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EventAggregatorSample</RootNamespace>
-    <AssemblyName>EventAggregatorSample</AssemblyName>
+    <RootNamespace>PrismCommandSample</RootNamespace>
+    <AssemblyName>PrismCommandSample</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -81,6 +81,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -99,14 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\Regions\OrderView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Regions\ShopOrderView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Shell.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,22 +109,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstraper.cs" />
-    <Compile Include="Helpers\ShopHelper.cs" />
-    <Compile Include="Helpers\ShopOrder.cs" />
-    <Compile Include="Helpers\ShopOrderEvent.cs" />
+    <Compile Include="ButtonBaseBehaviorHelper.cs" />
+    <Compile Include="ButtonClickBehavior.cs" />
     <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Modules\OrderModule.cs" />
-    <Compile Include="Modules\ShopModule.cs" />
-    <Compile Include="ViewModels\OrderViewModel.cs" />
-    <Compile Include="ViewModels\ShopViewModel.cs" />
-    <Compile Include="Views\Regions\OrderView.xaml.cs">
-      <DependentUpon>OrderView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Regions\ShopOrderView.xaml.cs">
-      <DependentUpon>ShopOrderView.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -167,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Views\Regions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
